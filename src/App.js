@@ -10,7 +10,7 @@ function App() {
   const [data, setData] = useState({})
 
   const getWeatherDetails = (cityName) => {
-    if(!cityName) return
+    if (!cityName) return
     const apiURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + apiKey
     axios.get(apiURL).then((res) => {
       console.log("response is ", res.data)
@@ -19,21 +19,16 @@ function App() {
       console.log("error is ", err)
     })
   }
-
-
   const handleInputCity = (event) => {
     setInputCity(event.target.value)
-    //     console.log(event.target.value)
-    // }
   }
-
 
   const handleSubmit = (event) => {
-    // alert("Gooo")
     event.preventDefault()
     getWeatherDetails(inputCity)
-
+    setInputCity("")
   }
+
   return (
     <>
       <div className='col-md-12'>
@@ -46,19 +41,23 @@ function App() {
             <button className='btn btn-primary' onClick={handleSubmit}>Search Here </button>
           </div>
         </div>
-        {Object.keys(data).length >0 &&
-        <div className='col-md-12 text-center mt-5'>
-          <div className='shadow rounded weatherResultBox'>
-            {/* <i class="bi bi-cloud-lightning-rain-fill" ></i> */}
-            <h4>{data?.name}</h4>
-            <h2>{((data?.main?.temp) - 273.15).toFixed(2)}°C</h2>
+        {Object.keys(data).length > 0 &&
+          <div className='col-md-12 text-center mt-5'>
+            <div className='shadow rounded weatherResultBox'>
+              <img src="https://img.icons8.com/cute-clipart/64/null/partly-cloudy-day.png" 
+              className='imgIcon' alt='no' />
+            <div>
+                <h4 className='cityname'>{data?.name}</h4>
+                <h2 className='citytemp'>{((data?.main?.temp) - 273.15).toFixed(2)}°C</h2>
+              </div>
+            </div>
           </div>
+        }
 
-        </div>
-          }
       </div>
     </>
   );
 }
+
 
 export default App;
