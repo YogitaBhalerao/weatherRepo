@@ -17,6 +17,7 @@ function App() {
       setData(res.data)
     }).catch((err) => {
       console.log("error is ", err)
+      alert("The City Not Found")
     })
   }
   const handleInputCity = (event) => {
@@ -46,10 +47,16 @@ function App() {
             <div className='shadow rounded weatherResultBox'>
               <img src="https://img.icons8.com/cute-clipart/64/null/partly-cloudy-day.png" 
               className='imgIcon' alt='no' />
-            <div>
-                <h4 className='cityname'>{data?.name}</h4>
-                <h2 className='citytemp'>{((data?.main?.temp) - 273.15).toFixed(2)}°C</h2>
-              </div>
+            <div className='cityTemp'>
+                 <h4 className='cityname'>{data?.name}</h4> 
+                 <h2 className='citytemp'>{((data?.main?.temp) - 273.15).toFixed(2)}°C</h2>
+            </div> 
+            <div className='container'>
+                 <h6><img  className='tempIcon' src="https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/64/null/external-cloud-multimedia-kiranshastry-gradient-kiranshastry.png" alt='no'/>
+                  {data?.weather[0]?.description}</h6>
+                 <h6><img src="https://img.icons8.com/fluency/48/null/dew-point.png" className='humidityIcon' alt='no'/>Humidity : {data?.main?.humidity} %</h6>
+                 <h6><img src="https://img.icons8.com/nolan/64/wind.png" className='windIcon' alt='no'/>Wind Speed : {data?.wind?.speed} Km/h</h6>
+            </div>
             </div>
           </div>
         }
