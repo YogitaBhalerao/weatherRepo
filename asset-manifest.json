@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/weatherRepo/static/css/main.bcccfd8a.css",
-    "main.js": "/weatherRepo/static/js/main.d2e8b7ce.js",
+    "main.css": "/weatherRepo/static/css/main.736498ca.css",
+    "main.js": "/weatherRepo/static/js/main.261f9538.js",
     "static/media/johannes-plenio-E-Zuyev2XWo-unsplash.jpg": "/weatherRepo/static/media/johannes-plenio-E-Zuyev2XWo-unsplash.8e80910742a13eafe70f.jpg",
     "static/media/bootstrap-icons.woff?": "/weatherRepo/static/media/bootstrap-icons.4753c5ba57962b4d7bf8.woff",
     "static/media/bootstrap-icons.woff2?": "/weatherRepo/static/media/bootstrap-icons.6d63d0501e5ed7b79dab.woff2",
     "index.html": "/weatherRepo/index.html",
-    "main.bcccfd8a.css.map": "/weatherRepo/static/css/main.bcccfd8a.css.map",
-    "main.d2e8b7ce.js.map": "/weatherRepo/static/js/main.d2e8b7ce.js.map"
+    "main.736498ca.css.map": "/weatherRepo/static/css/main.736498ca.css.map",
+    "main.261f9538.js.map": "/weatherRepo/static/js/main.261f9538.js.map"
   },
   "entrypoints": [
-    "static/css/main.bcccfd8a.css",
-    "static/js/main.d2e8b7ce.js"
+    "static/css/main.736498ca.css",
+    "static/js/main.261f9538.js"
   ]
 }
